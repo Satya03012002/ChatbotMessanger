@@ -1,0 +1,30 @@
+[{
+    "questions": [
+        "goodbye",
+        "bye take care",
+        "see you later",
+        "bye for now",
+        "i must go"
+    ],
+    "answers": [
+        "see you soon!",
+        "Till next time",
+        "bye bye",
+        "have a great day"
+    ]
+},
+{
+    "questions": [
+        "hello",
+        "hi",
+        "howdy",
+        "Greetings"
+    ],
+    "answers": [
+        "Hey there!",
+        "Hello",
+        "Hi",
+        "Greetings",
+        "thaks or your reply"
+    ]
+}]

@@ -1,0 +1,381 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "goodby": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "traindata",
+            "domain": "default"
+          },
+          "greet": {
+            "intent": "traindata",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "traindata": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye take care",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "traindata"
+          },
+          {
+            "domain": "default",
+            "utterance": "Greetings",
+            "intent": "traindata"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "goodby": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "for": 1,
+              "now": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "hello": 1,
+              "hi": 1,
+              "howdi": 1,
+              "greet": 1
+            },
+            "intents": {
+              "traindata": 1
+            },
+            "intentFeatures": {
+              "traindata": {
+                "goodby": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "for": 1,
+                "now": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1,
+                "hello": 1,
+                "hi": 1,
+                "howdi": 1,
+                "greet": 1
+              }
+            },
+            "featuresToIntent": {
+              "goodby": [
+                "traindata"
+              ],
+              "bye": [
+                "traindata"
+              ],
+              "take": [
+                "traindata"
+              ],
+              "care": [
+                "traindata"
+              ],
+              "see": [
+                "traindata"
+              ],
+              "you": [
+                "traindata"
+              ],
+              "later": [
+                "traindata"
+              ],
+              "for": [
+                "traindata"
+              ],
+              "now": [
+                "traindata"
+              ],
+              "i": [
+                "traindata"
+              ],
+              "must": [
+                "traindata"
+              ],
+              "go": [
+                "traindata"
+              ],
+              "hello": [
+                "traindata"
+              ],
+              "hi": [
+                "traindata"
+              ],
+              "howdi": [
+                "traindata"
+              ],
+              "greet": [
+                "traindata"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "goodby",
+                "bye",
+                "take",
+                "care",
+                "see",
+                "you",
+                "later",
+                "for",
+                "now",
+                "i",
+                "must",
+                "go",
+                "hello",
+                "hi",
+                "howdi",
+                "greet"
+              ],
+              "intents": [
+                "traindata"
+              ],
+              "perceptrons": [
+                [
+                  3.3845300674438477,
+                  1.7768245935440063,
+                  0.8828455209732056,
+                  0.8828455209732056,
+                  1.1898589134216309,
+                  1.1898589134216309,
+                  1.1898589134216309,
+                  0.8986523151397705,
+                  0.8986523151397705,
+                  1.1940325498580933,
+                  1.1940325498580933,
+                  1.1940325498580933,
+                  3.5425891876220703,
+                  3.50455379486084,
+                  3.4657740592956543,
+                  3.4263153076171875,
+                  10.755997499007291
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye take care"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "Greetings"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "traindata": [
+          {
+            "answer": "see you soon!"
+          },
+          {
+            "answer": "Till next time"
+          },
+          {
+            "answer": "bye bye"
+          },
+          {
+            "answer": "have a great day"
+          },
+          {
+            "answer": "Hey there!"
+          },
+          {
+            "answer": "Hello"
+          },
+          {
+            "answer": "Hi"
+          },
+          {
+            "answer": "Greetings"
+          },
+          {
+            "answer": "thaks or your reply"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
