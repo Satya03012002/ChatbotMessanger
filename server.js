@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv"
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 import axios from "axios";
+ // "test": "echo \"Error: no test specified\" && exit 1",
+    // "start": "nodemon server.js"
 
 
 const app = express();
