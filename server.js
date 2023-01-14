@@ -3,21 +3,27 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv"
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 import axios from "axios";
- // "test": "echo \"Error: no test specified\" && exit 1",
-    // "start": "nodemon server.js"
 
+import {index} from "./index.js"
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
-
+//http://localhost:5000/hello?name=hello
+// index();
 
 app.get("/",(req,res)=>{
-    console.log("k",req.query)
-    const challange = req.query["hub.challenge"]
-    const token = req.query["hub.verify_token"]
-    // res.send("hello world")
-    res.send(challange)
+   
+    res.send("hello")
+})
+app.get("/hello",async(req,res)=>{
+    console.log("name = ",req.query)
+    console.log("name = ",req.query.name)
+    const ans =  await index(req.query.name)
+    console.log("ans = ",ans)
+    res.send(ans)
+    
+    
 })
 app.post('/chatbot', (req, res) => {
     // Get the chat message from the request body
@@ -41,7 +47,7 @@ app.post('/chatbot', (req, res) => {
 const data = async()=>{
     try{
          const res = await axios.get("https://internshala.com/chat/c-40906496?filter=all")
-        //  console.log(res)
+        
     }catch(arr){
         console.log(arr)
     }
